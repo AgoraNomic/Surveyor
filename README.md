@@ -18,11 +18,14 @@ To file a new document:
 
 ## Estates
 
-The `estates` directory contains one directory per Estate, as defined by the rules, documenting the history of that Estate. Each event is recorded as a group of files, based on the timestamp of the event:
+The `estates` directory contains one directory per Estate, as defined
+by the rules, documenting the history of that Estate. Each event is
+recorded as a subdirectory, whose name is the ISO 8601 timestamp of the
+event. The following files exist in each event directory:
 
-* `YYYY-MM-DD-hh:mm:ss.eml` is a symbolic link to the original document in the `documents` directory.
+* `document` is a symbolic link to the original document in the `documents` directory.
 
-* `YYYY-MM-DD-hh:mm:ss.yaml` is a YAML file containing two keys:
+* `event.yaml` is a YAML file containing two keys:
 
     * The `event` key, describing the event. This presently contains a single key, `summary`, containing a one-line prose description of the event.
 
@@ -70,3 +73,14 @@ To set them up, or to install updated dependencies:
 3. You're done!
 
 The programs are contained in the `bin` directory, and respond with basic usage information when invoked as `PROGRAM --help`.
+
+To add new libraries:
+
+1. Install them in the virtualenv:
+
+        pip install NAME
+
+2. Update `requirements.txt`:
+
+        pip freeze > requirements.txt
+
