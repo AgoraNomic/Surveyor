@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+
+import argparse
+import email
+import os
+import os.path as path
+
+def file_email(document, name):
+    with open(document, 'r') as file:
+        message = email.message_from_file(file)
+    message_id = message.get('Message-ID', name)
+    message_id = message_id.lstrip('<').rstrip('>')
+    return '{message_id}.eml'.format(message_id=message_id)
+
+filers = {
+    '.eml': file_email
+}
+
+def file_as(original, canonical):
+    # Avoid overwriting existing files with the canonical name
+    with open(canonical, 'x'):
+        # If we created it successfully, we own it now. Rename the original over it.
+        try:
+            os.rename(original, canonical)
+        except FileNotFoundError:
+            # No original! Un-create the temporary file we created.
+            os.unlink(canonical)
+            raise
+
+class UnknownSuffixError(Exception):
+    pass
+
+def file_canonically(document):
+    dir, name = path.split(document)
+    for suffix, filer in filers.items():
+        if name.endswith(suffix):
+            new_name = filer(document, name)
+            canonical = path.join(dir, new_name)
+            if new_name != name:
+                file_as(document, canonical)
+            print(canonical)
+            return
+    raise UnknownSuffixError
+
+def parse_args():
+    parser = argparse.ArgumentParser(description='Move a document to its canonical filename, then output its canonical filename to stdout.')
+    parser.add_argument('document', help='document to file')
+    return parser.parse_args()
+
+def main():
+    args = parse_args()
+    file_canonically(args.document)
+
+if __name__ == '__main__':
+    main()
