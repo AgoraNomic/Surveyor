@@ -1,4 +1,7 @@
 decorator==4.0.11
+jsonpatch==1.15
+jsonpointer==1.10
 python-dateutil==2.6.0
 PyYAML==3.12
 six==1.10.0
+sortedcontainers==1.5.7

@@ -2,5 +2,15 @@
 event:
   summary: The Estate of Cagliostro created by Proposal 7846
 diff:
-  name: Cagliostro
-  owner: Agora
+- op: add
+  path: /estates/Cagliostro
+  value: {}
+- op: add
+  path: /estates/Cagliostro/full_name
+  value: The Estate of Cagliostro
+- op: add
+  path: /estates/Cagliostro/short_name
+  value: Cagliostro
+- op: add
+  path: /estates/Cagliostro/owner
+  value: Agora

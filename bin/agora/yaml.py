@@ -56,3 +56,9 @@ def dump(document, stream):
     defined by the dumper() function in this module.
     """
     return dump_all([document], stream)
+
+def load(stream):
+    """
+    Read a single document from a stream, as YAML.
+    """
+    return yaml.load(stream)

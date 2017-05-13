@@ -2,5 +2,15 @@
 event:
   summary: The Estate of Erehwon created by Proposal 7846
 diff:
-  name: Erehwon
-  owner: Agora
+- op: add
+  path: /estates/Erehwon
+  value: {}
+- op: add
+  path: /estates/Erehwon/full_name
+  value: The Estate of Erehwon
+- op: add
+  path: /estates/Erehwon/short_name
+  value: Erehwon
+- op: add
+  path: /estates/Erehwon/owner
+  value: Agora

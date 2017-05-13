@@ -2,5 +2,15 @@
 event:
   summary: The Estate of Antegria created by Proposal 7846
 diff:
-  name: Antegria
-  owner: Agora
+- op: add
+  path: /estates/Antegria
+  value: {}
+- op: add
+  path: /estates/Antegria/full_name
+  value: The Estate of Antegria
+- op: add
+  path: /estates/Antegria/short_name
+  value: Antegria
+- op: add
+  path: /estates/Antegria/owner
+  value: Agora

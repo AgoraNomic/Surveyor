@@ -18,10 +18,7 @@ To file a new document:
 
 ## Estates
 
-The `estates` directory contains one directory per Estate, as defined
-by the rules, documenting the history of that Estate. Each event is
-recorded as a subdirectory, whose name is the ISO 8601 timestamp of the
-event. The following files exist in each event directory:
+The `estates` directory contains one directory per Estate, as defined by the rules, documenting the history of that Estate. Each event is recorded as a subdirectory, whose name is the ISO 8601 timestamp of the event. The following files exist in each event directory:
 
 * `document` is a symbolic link to the original document in the `documents` directory.
 
@@ -29,15 +26,23 @@ event. The following files exist in each event directory:
 
     * The `event` key, describing the event. This presently contains a single key, `summary`, containing a one-line prose description of the event.
 
-    * The `diff` key, describing the changes to the state of the Estate's properties. This is a YAML encoding of an RFC 7386 JSON Merge-Patch object, which can be applied in sequence to build a YAML representation of the Estate.
+    * The `diff` key, describing the changes to the state of the Estate's properties. This is a YAML encoding of an RFC 6902 JSON Patch object, which can be applied in sequence to build a YAML representation of the Estate.
+
+    Interpretation of the diff key is modified from the RFC. Any key which is not otherwise defined by some sequence of patch actions is presumed to be equal to an empty object when first accessed by a patch. This allows disjoint sequences of patches to be coalesced into a single patch sequence without having to worry about the specific interleaving order on "uninteresting" keys (those which are objects that contain only objects, and exist solely to organize the data).
 
 All timestamps are in UTC.
 
-The YAML representation of an estate describes its properties at a specific point in time. It can be computed by starting with an empty YAML document and applying the diff section, as a JSON Merge-Patch document, of each event, in chronological order. The resulting object has, at present, two important keys:
+The YAML representation of an estate describes its properties at a specific point in time. It can be computed by starting with an empty YAML document and applying the diff section, as a JSON Patch document, of each event, in chronological order. The resulting object has, at present, the following important keys:
 
-* `name`, giving the short name of the Estate, and
+* `full_name`, giving the full formal name of the Estate, and
+
+* `short_name`, giving the short name of the Estate, and
 
 * `owner`, naming the entity which owns the Estate.
+
+* `description`, a prose description of the Estate, from the bidding contest.
+
+Other keys are permitted, but ignored by the reporting tools.
 
 To create a new event from a document:
 

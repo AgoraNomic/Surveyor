@@ -1,0 +1,219 @@
+Return-Path: <agora-business-bounces@agoranomic.org>
+X-Original-To: owen+agora@grimoire.ca
+Delivered-To: owen+agora@grimoire.ca
+Received: from localhost (localhost [127.0.0.1])
+	by grimoire.ca (Postfix) with ESMTP id BAC0840DC4
+	for <owen+agora@grimoire.ca>; Sat, 10 Jun 2017 22:41:02 +0000 (UTC)
+Authentication-Results: grimoire.ca (amavisd-new); dkim=pass (2048-bit key)
+	header.d=gmail.com
+Received: from grimoire.ca ([127.0.0.1])
+	by localhost (grimoire.ca [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id VBdj-5Cavo9s for <owen+agora@grimoire.ca>;
+	Sat, 10 Jun 2017 22:41:01 +0000 (UTC)
+Received: from vps.qoid.us (vps.qoid.us [71.19.146.223])
+	by grimoire.ca (Postfix) with SMTP id BB3DD3F125
+	for <owen+agora@grimoire.ca>; Sat, 10 Jun 2017 22:41:01 +0000 (UTC)
+Received: (qmail 19754 invoked from network); 10 Jun 2017 22:41:01 -0000
+Received: from localhost (HELO vps.qoid.us) (127.0.0.1)
+  by vps.qoid.us with SMTP; 10 Jun 2017 22:41:01 -0000
+Delivered-To: agn-agora-business@agoranomic.org
+Received: (qmail 19745 invoked from network); 10 Jun 2017 22:40:59 -0000
+Received: from mail-wr0-f178.google.com (209.85.128.178)
+ by vps.qoid.us with SMTP; 10 Jun 2017 22:40:59 -0000
+Received: by mail-wr0-f178.google.com with SMTP id q97so63039139wrb.2
+ for <agora-business@agoranomic.org>; Sat, 10 Jun 2017 15:40:59 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+ bh=Ohd0N0b+oApbxGLjSVYLYEUbAj1IjY8MWLC4T7h3b50=;
+ b=DhgvU0W1GIugvQwHVpwkwd2aSD6tCIuhQRYWon5Xn3Nt3GcP5WoktOUum633cGzLw3
+ +2JTWkqHv+BACnCAKiG28GSvVbJSc6jzlkmASL7sca+N9IXDLOKJ3VKZ/ETNHLfbxaFV
+ Vc3rDuk6LMyulThvD5zZ6QsC4GPPAp1aTmemE1AKckkeLscUcmCVfvMQHgl4WiC6G1ga
+ gbjIV1wvKZSUtWjYfGG5SPEARMXajqrTeLFxgl/9eVeAR+lpHzqVzgyf2wkNpMHmlaJ0
+ 2TuILczING6HDU4tty1zqcoRx4hULRJitRHFWfoTci9Sk63rvQAb6zOeQgIJmvM52k70
+ 4kuQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+ :message-id:subject:to;
+ bh=Ohd0N0b+oApbxGLjSVYLYEUbAj1IjY8MWLC4T7h3b50=;
+ b=bjPl06h3e+WqhIOZB1Z5bTAVtoALIHsN9ZGb/LEt5qjFb8PCKN7q2P5UpOFhUF/jPS
+ cxnhcySD2EK7cg+2EyVQ5a3k2LyXU7wyJqk6KrqHljLAk4aA4UxerMKgKJGdTh6Rj49h
+ PsCjrIkRTTHpyiQ43N8hPGBqn5N3y2faH4AtCN5NYWO6/xbUN2xVw5GdrTwpXP+zVKgd
+ 3UNBueU6net4FaHonkKa1XZBfzvvO04TwEJrti1UGsyITTykuLdhRRW19kkkjQRtMh7G
+ V3VDTdMD3/tCv+CONY3thQtCM2elT7jt5x4Hxkv5uDchQtw0Fwq99NwWR24hZeQ253LV
+ 9iFw==
+X-Gm-Message-State: AODbwcABQWtYtNGmawyWBuprYdxRHJCX5/8w5QgheiUHZxTAcVveLSSI
+ 8xmwF5BjZ64h89v0PrscjYDoRYSB0Q==
+X-Received: by 10.223.151.210 with SMTP id t18mr3142829wrb.18.1497134457430;
+ Sat, 10 Jun 2017 15:40:57 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.223.176.7 with HTTP; Sat, 10 Jun 2017 15:40:37 -0700 (PDT)
+In-Reply-To: <3F9309D8-2F22-4498-8616-6CF4B8EB16B4@grimoire.ca>
+References: <EC1A9E36-0C06-4A83-A26C-C3CA531860C6@grimoire.ca>
+ <CADZTPgmH-ZtJ=3Sxc6LZHmp3KTeHrxLSgzZiPKBH=QW+95ARwg@mail.gmail.com>
+ <CADZTPg=Rjfx+MfXyONcH9GS9jso_u5Vi4mEz4EmDH-CP_=oXqQ@mail.gmail.com>
+ <3F9309D8-2F22-4498-8616-6CF4B8EB16B4@grimoire.ca>
+From: Josh T <draconicdarkness@gmail.com>
+Date: Sat, 10 Jun 2017 18:40:37 -0400
+Message-ID: <CADZTPgn2a=ZwtgVB2+dDSpVPmQQXEOpjpOBMg5mD1f==XVSF4A@mail.gmail.com>
+Subject: Re: BUS: [Surveyor] June Estate Auction
+To: Agora Business <agora-business@agoranomic.org>
+Content-Type: multipart/alternative; boundary="94eb2c1cbf248427380551a2c75a"
+X-BeenThere: agora-business@agoranomic.org
+X-Mailman-Version: 2.1.22
+Precedence: list
+List-Id: "Agora Nomic public communications \(PF\)"
+ <agora-business.agoranomic.org>
+List-Unsubscribe: <http://www.agoranomic.org/cgi-bin/mailman/options/agora-business>,
+ <mailto:agora-business-request@agoranomic.org?subject=unsubscribe>
+List-Archive: <http://www.agoranomic.org/cgi-bin/mailman/private/agora-business/>
+List-Post: <mailto:agora-business@agoranomic.org>
+List-Help: <mailto:agora-business-request@agoranomic.org?subject=help>
+List-Subscribe: <http://www.agoranomic.org/cgi-bin/mailman/listinfo/agora-business>,
+ <mailto:agora-business-request@agoranomic.org?subject=subscribe>
+Reply-To: agora-discussion@agoranomic.org
+Errors-To: agora-business-bounces@agoranomic.org
+Sender: "agora-business" <agora-business-bounces@agoranomic.org>
+
+--94eb2c1cbf248427380551a2c75a
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+I cause Agora to transfer to me the Estate of Antegria by paying Agora 50
+Shinies.
+
+=E5=A4=A9=E7=81=AB=E7=8B=90
+
+On 10 June 2017 at 04:27, Owen Jacobson <owen@grimoire.ca> wrote:
+
+> At 1:43 AM EDT on June 9th, the auction for the Estate of Antegria ended.
+> The following bids have been posted and not retracted:
+>
+> * =E5=A4=A9=E7=81=AB=E7=8B=90 bid 50 Shinies, on eir own behalf.
+>
+> =E5=A4=A9=E7=81=AB=E7=8B=90 placed the single highest bid on the auction,=
+ and can collect eir
+> Estate by paying Agora 50 Shinies and transferring the Estate by
+> announcement. Please do so in a timely fashion.
+>
+> In satisfaction of my pledge, I pay =E5=A4=A9=E7=81=AB=E7=8B=90 5 Shinies=
+.
+>
+> -o
+>
+> P.S. The winning bid is reproduced in full below.
+>
+> > On Jun 2, 2017, at 1:20 PM, Josh T <draconicdarkness@gmail.com> wrote:
+> >
+> > I retract any previous "bid" I made on the Estate of Antegria.
+> >
+> > I bid 50 Shinies on the estate of Antegria, and submit the below-quoted
+> text as the blurb (it's identical to the original):
+> >
+> > {{
+> > Anomic Antegria is a picturesque pastoral region with many historic
+> sites in its borders. Although known primarily for its many open-air
+> sulphur lakes and the occasional volcanic eruption, Antegria is a land of
+> endless natural beauty with over three national parks dedicated to some o=
+f
+> the most unique landscapes of the world, such as Antegria's famed desert =
+of
+> glass, pristine lava flats, and wide expansive heaths. A trip through fet=
+id
+> Antegria is not complete without spotting two of the most iconic animals
+> inhabiting the region: the Moorlands Dire Alpaca and the Antegrian Fire
+> Keese, both of which should be easy to find on any day trip from the
+> capital, St. Marmero.
+> >
+> > For the culturally-inclined visitor, the Presidential Palace Square in
+> downtown St. Marmero is an iconic location, and, with the completion of t=
+he
+> new statue commemorating the crowning of the Princess of Agora, now an ev=
+en
+> more paramount destination to be visiting. Down the street from the palac=
+e
+> is the Antegrian War Memorial, showing the struggles and triumphs of our
+> countrymen in the many wars this region had been embroiled in. From
+> visiting the noteworthy battlefields of yore to a gastronomical adventure
+> across the countryside, the Ministry of Tourism offers a variety of tours=
+,
+> with complementary professional tour guides and security for the trip. If=
+ a
+> regimented schedule is not your thing, heading out and forging your own
+> path in Antegria is always an adventure: you may even find some hidden ge=
+ms
+> in the countryside!
+> > }}
+> >
+> > =E5=A4=A9=E7=81=AB=E7=8B=90
+>
+>
+
+--94eb2c1cbf248427380551a2c75a
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">I cause Agora to transfer to me the Estate of Antegria by =
+paying Agora 50 Shinies.=C2=A0<div><br></div><div>=E5=A4=A9=E7=81=AB=E7=8B=
+=90<br><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On 10 June=
+ 2017 at 04:27, Owen Jacobson <span dir=3D"ltr">&lt;<a href=3D"mailto:owen@=
+grimoire.ca" target=3D"_blank">owen@grimoire.ca</a>&gt;</span> wrote:<br><b=
+lockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px =
+#ccc solid;padding-left:1ex">At 1:43 AM EDT on June 9th, the auction for th=
+e Estate of Antegria ended. The following bids have been posted and not ret=
+racted:<br>
+<br>
+* =E5=A4=A9=E7=81=AB=E7=8B=90 bid 50 Shinies, on eir own behalf.<br>
+<br>
+=E5=A4=A9=E7=81=AB=E7=8B=90 placed the single highest bid on the auction, a=
+nd can collect eir Estate by paying Agora 50 Shinies and transferring the E=
+state by announcement. Please do so in a timely fashion.<br>
+<br>
+In satisfaction of my pledge, I pay =E5=A4=A9=E7=81=AB=E7=8B=90 5 Shinies.<=
+br>
+<br>
+-o<br>
+<br>
+P.S. The winning bid is reproduced in full below.<br>
+<br>
+&gt; On Jun 2, 2017, at 1:20 PM, Josh T &lt;<a href=3D"mailto:draconicdarkn=
+ess@gmail.com" target=3D"_blank">draconicdarkness@gmail.com</a>&gt; wrote:<=
+br>
+&gt;<br>
+&gt; I retract any previous &quot;bid&quot; I made on the Estate of Antegri=
+a.<br>
+&gt;<br>
+&gt; I bid 50 Shinies on the estate of Antegria, and submit the below-quote=
+d text as the blurb (it&#39;s identical to the original):<br>
+&gt;<br>
+&gt; {{<br>
+&gt; Anomic Antegria is a picturesque pastoral region with many historic si=
+tes in its borders. Although known primarily for its many open-air sulphur =
+lakes and the occasional volcanic eruption, Antegria is a land of endless n=
+atural beauty with over three national parks dedicated to some of the most =
+unique landscapes of the world, such as Antegria&#39;s famed desert of glas=
+s, pristine lava flats, and wide expansive heaths. A trip through fetid Ant=
+egria is not complete without spotting two of the most iconic animals inhab=
+iting the region: the Moorlands Dire Alpaca and the Antegrian Fire Keese, b=
+oth of which should be easy to find on any day trip from the capital, St. M=
+armero.<br>
+&gt;<br>
+&gt; For the culturally-inclined visitor, the Presidential Palace Square in=
+ downtown St. Marmero is an iconic location, and, with the completion of th=
+e new statue commemorating the crowning of the Princess of Agora, now an ev=
+en more paramount destination to be visiting. Down the street from the pala=
+ce is the Antegrian War Memorial, showing the struggles and triumphs of our=
+ countrymen in the many wars this region had been embroiled in. From visiti=
+ng the noteworthy battlefields of yore to a gastronomical adventure across =
+the countryside, the Ministry of Tourism offers a variety of tours, with co=
+mplementary professional tour guides and security for the trip. If a regime=
+nted schedule is not your thing, heading out and forging your own path in A=
+ntegria is always an adventure: you may even find some hidden gems in the c=
+ountryside!<br>
+&gt; }}<br>
+&gt;<br>
+&gt; =E5=A4=A9=E7=81=AB=E7=8B=90<br>
+<br>
+</blockquote></div><br></div></div></div>
+
+--94eb2c1cbf248427380551a2c75a--

@@ -1,0 +1,7 @@
+---
+event:
+  summary: 天火狐 bought the Estate of Antegria for 50 Shinies
+diff:
+- op: replace
+  path: /estates/Antegria/owner
+  value: 天火狐

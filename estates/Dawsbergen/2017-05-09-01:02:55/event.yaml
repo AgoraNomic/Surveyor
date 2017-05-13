@@ -2,5 +2,15 @@
 event:
   summary: The Estate of Dawsbergen created by Proposal 7846
 diff:
-  name: Dawsbergen
-  owner: Agora
+- op: add
+  path: /estates/Dawsbergen
+  value: {}
+- op: add
+  path: /estates/Dawsbergen/full_name
+  value: The Estate of Dawsbergen
+- op: add
+  path: /estates/Dawsbergen/short_name
+  value: Dawsbergen
+- op: add
+  path: /estates/Dawsbergen/owner
+  value: Agora

@@ -1,13 +1,35 @@
-import collections as c
 import agora.datetime as adt
 import agora.yaml as yaml
+import collections as c
+import datetime as dt
+import os
 import os.path
+import sortedcontainers as sc
 
 class Event(object):
+    ID_FORMAT = '%Y-%m-%d-%H:%M:%S'
+
     """
     An Event is a chronological entry in an event collection (a
     directory) placing a specific Document in that collection.
     """
+
+    @classmethod
+    def from_filesystem(cls, collection, id):
+        """
+        Load an Event from a directory on disk.
+        """
+        entry_path = cls.path_for(collection, id)
+        document = os.readlink(cls.document_path_for(entry_path))
+        timestamp = dt.datetime.strptime(id, cls.ID_FORMAT)
+        metadata = cls.read_metadata(cls.metadata_path_for(entry_path))
+
+        return cls(collection, document, timestamp, metadata)
+
+    @classmethod
+    def read_metadata(cls, path):
+        with open(path, 'r') as file:
+            return yaml.load(file)
 
     @classmethod
     def from_document(cls, collection, document, timestamp=None):
@@ -29,9 +51,13 @@ class Event(object):
             event=dict(
                 summary=document.summary,
             ),
-            diff=dict(
-                field='new value',
-            ),
+            diff=[
+                c.OrderedDict(
+                    op='replace',
+                    path='/some/field',
+                    value='new value',
+                ),
+            ],
         )
 
     def __init__(self, collection, document, timestamp, metadata):
@@ -47,19 +73,35 @@ class Event(object):
 
     @property
     def id(self):
-        return self.timestamp.isoformat('-', 'seconds')
+        return self.timestamp.strftime(self.ID_FORMAT)
+
+    @property
+    def summary(self):
+        return self.metadata['event']['summary']
+
+    @classmethod
+    def path_for(cls, collection, id):
+        return os.path.join(collection, id)
 
     @property
     def path(self):
-        return os.path.join(self.collection, self.id)
+        return self.path_for(self.collection, self.id)
+
+    @classmethod
+    def document_path_for(cls, path):
+        return os.path.join(path, 'document')
 
     @property
     def document_path(self):
-        return os.path.join(self.path, 'document')
+        return self.document_path_for(self.path)
+
+    @classmethod
+    def metadata_path_for(cls, path):
+        return os.path.join(path, 'event.yaml')
 
     @property
     def metadata_path(self):
-        return os.path.join(self.path, 'event.yaml')
+        return self.metadata_path_for(self.path)
 
     def create(self):
         """
@@ -69,7 +111,6 @@ class Event(object):
         self._create_event_directory()
         self._create_document_link()
         self._create_event_metadata()
-
 
     def _create_event_directory(self):
         os.mkdir(self.path)
@@ -81,3 +122,17 @@ class Event(object):
     def _create_event_metadata(self):
         with open(self.metadata_path, 'w') as meta:
             yaml.dump(self.metadata, meta)
+
+    def __repr__(self):
+        return "Event(timestamp={0.timestamp})".format(self)
+
+def load_collection(collection):
+    """
+    Given a collection directory, load every event in it and return
+    them in a chronologically-sorted list.
+    """
+    def timestamp(event):
+        return event.timestamp
+
+    events = (Event.from_filesystem(collection, entry) for entry in os.listdir(collection))
+    return sc.SortedListWithKey(events, key=timestamp)

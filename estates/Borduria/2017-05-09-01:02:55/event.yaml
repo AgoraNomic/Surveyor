@@ -2,5 +2,15 @@
 event:
   summary: The Estate of Borduria created by Proposal 7846
 diff:
-  name: Borduria
-  owner: Agora
+- op: add
+  path: /estates/Borduria
+  value: {}
+- op: add
+  path: /estates/Borduria/full_name
+  value: The Estate of Borduria
+- op: add
+  path: /estates/Borduria/short_name
+  value: Borduria
+- op: add
+  path: /estates/Borduria/owner
+  value: Agora

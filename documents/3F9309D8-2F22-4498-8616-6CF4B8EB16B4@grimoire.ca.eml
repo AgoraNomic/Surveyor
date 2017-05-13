@@ -1,0 +1,139 @@
+Return-Path: <agora-business-bounces@agoranomic.org>
+X-Original-To: owen+agora@grimoire.ca
+Delivered-To: owen+agora@grimoire.ca
+Received: from localhost (localhost [127.0.0.1])
+	by grimoire.ca (Postfix) with ESMTP id C97224049D
+	for <owen+agora@grimoire.ca>; Sat, 10 Jun 2017 08:27:49 +0000 (UTC)
+Received: from grimoire.ca ([127.0.0.1])
+	by localhost (grimoire.ca [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id nkTtQ-i2ofzk for <owen+agora@grimoire.ca>;
+	Sat, 10 Jun 2017 08:27:49 +0000 (UTC)
+Received: from vps.qoid.us (vps.qoid.us [71.19.146.223])
+	by grimoire.ca (Postfix) with SMTP id 0AEF23FAD0
+	for <owen+agora@grimoire.ca>; Sat, 10 Jun 2017 08:27:48 +0000 (UTC)
+Received: (qmail 5985 invoked from network); 10 Jun 2017 08:27:48 -0000
+Received: from localhost (HELO vps.qoid.us) (127.0.0.1)
+  by vps.qoid.us with SMTP; 10 Jun 2017 08:27:48 -0000
+Delivered-To: agn-agora-business@agoranomic.org
+Received: (qmail 5976 invoked from network); 10 Jun 2017 08:27:47 -0000
+Received: from grimoire.ca (69.164.211.26)
+ by vps.qoid.us with SMTP; 10 Jun 2017 08:27:47 -0000
+Received: from localhost (localhost [127.0.0.1])
+ by grimoire.ca (Postfix) with ESMTP id 021054049D
+ for <agora-business@agoranomic.org>; Sat, 10 Jun 2017 08:27:47 +0000 (UTC)
+Received: from grimoire.ca ([127.0.0.1])
+ by localhost (grimoire.ca [127.0.0.1]) (amavisd-new, port 10024)
+ with ESMTP id h3fwcUdjwX7Z for <agora-business@agoranomic.org>;
+ Sat, 10 Jun 2017 08:27:46 +0000 (UTC)
+Received: from [10.0.1.4] (198-84-234-75.cpe.teksavvy.com [198.84.234.75])
+ by grimoire.ca (Postfix) with ESMTPSA id 3E55E3FAD0
+ for <agora-business@agoranomic.org>; Sat, 10 Jun 2017 08:27:46 +0000 (UTC)
+From: Owen Jacobson <owen@grimoire.ca>
+Content-Type: multipart/signed;
+ boundary="Apple-Mail=_BDFB173A-DCFE-4B20-8ED1-5EE75ADBF9BF";
+ protocol="application/pgp-signature"; micalg=pgp-sha512
+Mime-Version: 1.0 (Mac OS X Mail 10.3 \(3273\))
+Date: Sat, 10 Jun 2017 04:27:45 -0400
+References: <EC1A9E36-0C06-4A83-A26C-C3CA531860C6@grimoire.ca>
+ <CADZTPgmH-ZtJ=3Sxc6LZHmp3KTeHrxLSgzZiPKBH=QW+95ARwg@mail.gmail.com>
+ <CADZTPg=Rjfx+MfXyONcH9GS9jso_u5Vi4mEz4EmDH-CP_=oXqQ@mail.gmail.com>
+To: Agora Nomic - Business <agora-business@agoranomic.org>
+In-Reply-To: <CADZTPg=Rjfx+MfXyONcH9GS9jso_u5Vi4mEz4EmDH-CP_=oXqQ@mail.gmail.com>
+Message-Id: <3F9309D8-2F22-4498-8616-6CF4B8EB16B4@grimoire.ca>
+X-Mailer: Apple Mail (2.3273)
+Subject: BUS: [Surveyor] June Estate Auction
+X-BeenThere: agora-business@agoranomic.org
+X-Mailman-Version: 2.1.22
+Precedence: list
+List-Id: "Agora Nomic public communications \(PF\)"
+ <agora-business.agoranomic.org>
+List-Unsubscribe: <http://www.agoranomic.org/cgi-bin/mailman/options/agora-business>, 
+ <mailto:agora-business-request@agoranomic.org?subject=unsubscribe>
+List-Archive: <http://www.agoranomic.org/cgi-bin/mailman/private/agora-business/>
+List-Post: <mailto:agora-business@agoranomic.org>
+List-Help: <mailto:agora-business-request@agoranomic.org?subject=help>
+List-Subscribe: <http://www.agoranomic.org/cgi-bin/mailman/listinfo/agora-business>, 
+ <mailto:agora-business-request@agoranomic.org?subject=subscribe>
+Reply-To: agora-discussion@agoranomic.org
+Errors-To: agora-business-bounces@agoranomic.org
+Sender: "agora-business" <agora-business-bounces@agoranomic.org>
+
+
+--Apple-Mail=_BDFB173A-DCFE-4B20-8ED1-5EE75ADBF9BF
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+At 1:43 AM EDT on June 9th, the auction for the Estate of Antegria =
+ended. The following bids have been posted and not retracted:
+
+* =E5=A4=A9=E7=81=AB=E7=8B=90 bid 50 Shinies, on eir own behalf.
+
+=E5=A4=A9=E7=81=AB=E7=8B=90 placed the single highest bid on the =
+auction, and can collect eir Estate by paying Agora 50 Shinies and =
+transferring the Estate by announcement. Please do so in a timely =
+fashion.
+
+In satisfaction of my pledge, I pay =E5=A4=A9=E7=81=AB=E7=8B=90 5 =
+Shinies.
+
+-o
+
+P.S. The winning bid is reproduced in full below.
+
+> On Jun 2, 2017, at 1:20 PM, Josh T <draconicdarkness@gmail.com> wrote:
+>=20
+> I retract any previous "bid" I made on the Estate of Antegria.
+>=20
+> I bid 50 Shinies on the estate of Antegria, and submit the =
+below-quoted text as the blurb (it's identical to the original):
+>=20
+> {{
+> Anomic Antegria is a picturesque pastoral region with many historic =
+sites in its borders. Although known primarily for its many open-air =
+sulphur lakes and the occasional volcanic eruption, Antegria is a land =
+of endless natural beauty with over three national parks dedicated to =
+some of the most unique landscapes of the world, such as Antegria's =
+famed desert of glass, pristine lava flats, and wide expansive heaths. A =
+trip through fetid Antegria is not complete without spotting two of the =
+most iconic animals inhabiting the region: the Moorlands Dire Alpaca and =
+the Antegrian Fire Keese, both of which should be easy to find on any =
+day trip from the capital, St. Marmero.
+>=20
+> For the culturally-inclined visitor, the Presidential Palace Square in =
+downtown St. Marmero is an iconic location, and, with the completion of =
+the new statue commemorating the crowning of the Princess of Agora, now =
+an even more paramount destination to be visiting. Down the street from =
+the palace is the Antegrian War Memorial, showing the struggles and =
+triumphs of our countrymen in the many wars this region had been =
+embroiled in. =46rom visiting the noteworthy battlefields of yore to a =
+gastronomical adventure across the countryside, the Ministry of Tourism =
+offers a variety of tours, with complementary professional tour guides =
+and security for the trip. If a regimented schedule is not your thing, =
+heading out and forging your own path in Antegria is always an =
+adventure: you may even find some hidden gems in the countryside!
+> }}
+>=20
+> =E5=A4=A9=E7=81=AB=E7=8B=90
+
+
+--Apple-Mail=_BDFB173A-DCFE-4B20-8ED1-5EE75ADBF9BF
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+	filename=signature.asc
+Content-Type: application/pgp-signature;
+	name=signature.asc
+Content-Description: Message signed with OpenPGP
+
+-----BEGIN PGP SIGNATURE-----
+
+iQEcBAEBCgAGBQJZO62BAAoJEFAjKZHxDf/QxzIH/0LskXX4Xy+kvcC2d15pj129
+rghu8c8JJtAu7y2AT5SFgFz3qdPhKAY+Qa5IofXUuJ4JHiUBaHGwJoh97mIbgPdX
+JzgNa3dn0rG8z1AZ5wc4jXII6Wp90+2uuh/2PxSEcibSvp7HUH9wDUuGKF6O8A7c
+mR/N2kkoTfL2+n6+CWznu9IrygOTJxry8diLgvVudTxXZIPqLL4+02uEZ2hCGBad
+kXn8i3QFAoJXB1h1ydGGVrf0wTGcNEpBxZ4V17kh9ppc73GXZbcIDLY7F655RUKx
+iWpqZnps0InXv+x85W/R3elQihhcrhg37fhgjw6nW9HyOjzA1hTsuIn24I+Eu14=
+=XP+a
+-----END PGP SIGNATURE-----
+
+--Apple-Mail=_BDFB173A-DCFE-4B20-8ED1-5EE75ADBF9BF--

@@ -1,0 +1,113 @@
+Return-Path: <agora-official-bounces@agoranomic.org>
+X-Original-To: owen+agora@grimoire.ca
+Delivered-To: owen+agora@grimoire.ca
+Received: from localhost (localhost [127.0.0.1])
+	by grimoire.ca (Postfix) with ESMTP id 7A59C404BE
+	for <owen+agora@grimoire.ca>; Fri,  2 Jun 2017 05:44:03 +0000 (UTC)
+Received: from grimoire.ca ([127.0.0.1])
+	by localhost (grimoire.ca [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id YU5GWgSLjXPY for <owen+agora@grimoire.ca>;
+	Fri,  2 Jun 2017 05:44:02 +0000 (UTC)
+Received: from vps.qoid.us (vps.qoid.us [71.19.146.223])
+	by grimoire.ca (Postfix) with SMTP id 9F3003F12B
+	for <owen+agora@grimoire.ca>; Fri,  2 Jun 2017 05:44:02 +0000 (UTC)
+Received: (qmail 30142 invoked from network); 2 Jun 2017 05:44:02 -0000
+Received: from localhost (HELO vps.qoid.us) (127.0.0.1)
+  by vps.qoid.us with SMTP; 2 Jun 2017 05:44:02 -0000
+Delivered-To: agn-agora-official@agoranomic.org
+Received: (qmail 30133 invoked from network); 2 Jun 2017 05:44:01 -0000
+Received: from grimoire.ca (69.164.211.26)
+ by vps.qoid.us with SMTP; 2 Jun 2017 05:44:01 -0000
+Received: from localhost (localhost [127.0.0.1])
+ by grimoire.ca (Postfix) with ESMTP id A9BFE404BE
+ for <agora-official@agoranomic.org>; Fri,  2 Jun 2017 05:44:00 +0000 (UTC)
+Received: from grimoire.ca ([127.0.0.1])
+ by localhost (grimoire.ca [127.0.0.1]) (amavisd-new, port 10024)
+ with ESMTP id AGqQFUzdr9tQ for <agora-official@agoranomic.org>;
+ Fri,  2 Jun 2017 05:44:00 +0000 (UTC)
+Received: from [10.0.1.4] (198-84-234-75.cpe.teksavvy.com [198.84.234.75])
+ by grimoire.ca (Postfix) with ESMTPSA id F15A83F12B
+ for <agora-official@agoranomic.org>; Fri,  2 Jun 2017 05:43:59 +0000 (UTC)
+From: Owen Jacobson <owen@grimoire.ca>
+Content-Type: multipart/signed;
+ boundary="Apple-Mail=_D695B517-ED26-4AD5-BB89-56C94FC9AA81";
+ protocol="application/pgp-signature"; micalg=pgp-sha512
+Mime-Version: 1.0 (Mac OS X Mail 10.3 \(3273\))
+Message-Id: <EC1A9E36-0C06-4A83-A26C-C3CA531860C6@grimoire.ca>
+Date: Fri, 2 Jun 2017 01:43:59 -0400
+To: Agora Nomic - Official <agora-official@agoranomic.org>
+X-Mailer: Apple Mail (2.3273)
+Subject: OFF: [Surveyor] June Estate Auction
+X-BeenThere: agora-official@agoranomic.org
+X-Mailman-Version: 2.1.22
+Precedence: list
+List-Id: "Agora Nomic reports, etc. \(PF\)" <agora-official.agoranomic.org>
+List-Unsubscribe: <http://www.agoranomic.org/cgi-bin/mailman/options/agora-official>, 
+ <mailto:agora-official-request@agoranomic.org?subject=unsubscribe>
+List-Archive: <http://www.agoranomic.org/cgi-bin/mailman/private/agora-official/>
+List-Post: <mailto:agora-official@agoranomic.org>
+List-Help: <mailto:agora-official-request@agoranomic.org?subject=help>
+List-Subscribe: <http://www.agoranomic.org/cgi-bin/mailman/listinfo/agora-official>, 
+ <mailto:agora-official-request@agoranomic.org?subject=subscribe>
+Reply-To: agora-discussion@agoranomic.org
+Errors-To: agora-official-bounces@agoranomic.org
+Sender: "agora-official" <agora-official-bounces@agoranomic.org>
+
+
+--Apple-Mail=_D695B517-ED26-4AD5-BB89-56C94FC9AA81
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+Agora owns at least one Estate. As such, it is my honour to begin the =
+auction for the Estate of Antegria. Bids may be placed by announcement =
+to the public forum as described in Rule 2491.
+
+All players are eligible to place bids on their own behalf. All players =
+are eligible to place bids on behalf of an Organization if it is =
+Appropriate under that Organization=E2=80=99s charter.
+
+Don=E2=80=99t forget, I=E2=80=99ve pledged to run a writing competition =
+during this auction:
+
+> If elected Surveyor, then, during the June estate auction - during =
+which i will auction off Antegria - I will additionally accept short, =
+tourist-centric, blurbs about Antegria alongside bids. These blurbs =
+should talk about the history and geography of the region of Antegria, =
+and pitch it to hypothetical tourists who might want to visit that =
+region.
+>=20
+> If the winning bid includes a blurb of at least 70 words, I pledge to =
+kick in 10% of the winning bid, rounded up, up to a maximum of 50 =
+shinies, by paying the winner that amount from my own balance immedately =
+after resolving the auction.
+>=20
+> These blurbs will be included, for flavour, in the Surveyor=E2=80=99s =
+weekly report.
+
+
+I=E2=80=99m looking forwards to your submissions!
+
+-o
+
+
+--Apple-Mail=_D695B517-ED26-4AD5-BB89-56C94FC9AA81
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+	filename=signature.asc
+Content-Type: application/pgp-signature;
+	name=signature.asc
+Content-Description: Message signed with OpenPGP
+
+-----BEGIN PGP SIGNATURE-----
+
+iQEcBAEBCgAGBQJZMPsfAAoJEFAjKZHxDf/QS7sIALSR1AoDFH6xCDqgwQaw46YK
+kA1+UorvcPQSjaW+zfSZCCgmQ9sn+h36Dz/GY6T5eImp+HAcyS9SO/qVJfHrr3Qw
+yq5ATIRUyY+zAw3/MPXUca8tOYBshhk/KU0IH9yhXGOydp0uT3SQU5CXCrCROuWR
+tO2gqwWsz7wIpe4FSYt//NSa34gURLaTIdnLJKsXfFXOWnDd9IdwgMrCGx1EPliZ
+BXLTH9Or6ZDsKcI7Wn3815xbq45gEJxhHpUwT+Xhw0JHLM4N1svANS6/NdeJI9F3
+RvrokVtko0ZCMeMxLMlCdiqr+NiQROzMFqwb/+2VQap47UIktJonO/GfYoYPZ2s=
+=DJOP
+-----END PGP SIGNATURE-----
+
+--Apple-Mail=_D695B517-ED26-4AD5-BB89-56C94FC9AA81--

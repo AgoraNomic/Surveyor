@@ -1,0 +1,94 @@
+#!/usr/bin/env python3
+
+import agora.event as ae
+import argparse
+import collections as c
+import datetime as dt
+import dateutil.parser as dp
+import jsonpatch as jp
+import os
+import os.path
+import sortedcontainers as sc
+import textwrap as tw
+
+def parse_args():
+    now = dt.datetime.utcnow()
+
+    parser = argparse.ArgumentParser(description='Generate the Surveyor weekly report.')
+    parser.add_argument('estates', help='path to estates collection to report on')
+    return parser.parse_args()
+
+def merge(lists):
+    first, *rest = lists
+    merged = first.copy()
+    for list in rest:
+        for elem in list:
+            merged.add(elem)
+    return merged
+
+def apply_all(value, patches):
+    for patch in patches:
+        value = patch.apply(value)
+    return value
+
+def state_node():
+    return c.defaultdict(state_node)
+
+def main():
+    args = parse_args()
+
+    events = merge(
+        ae.load_collection(os.path.join(args.estates, estate))
+        for estate in sorted(os.listdir(args.estates))
+    )
+
+    patches = [jp.JsonPatch(event.metadata['diff']) for event in events if 'diff' in event.metadata]
+    state = apply_all(state_node(), patches)
+
+    print('Recent events (all times UTC)')
+    print()
+    for event in events:
+        print('{0.timestamp:%a, %d %b %Y %H:%M:%S}  {0.summary}'.format(event))
+    print()
+    print()
+
+    estates = state['estates']
+
+    estate_width = max(len(estate['short_name']) for estate in estates.values())
+    owner_width = max(len(estate['owner']) for estate in estates.values())
+
+    print('{estate:{estate_width}}   {owner:>{owner_width}}'.format(estate='Estate', estate_width=estate_width, owner='Owner', owner_width=owner_width))
+    print('-' * (estate_width + 3 + owner_width))
+    for estate in estates.values():
+        print('{0[short_name]:{estate_width}}   {0[owner]:>{owner_width}}'.format(estate, estate_width=estate_width, owner_width=owner_width))
+    print()
+    print()
+
+    for estate in estates.values():
+        print('===== {0[full_name]} ====='.format(estate))
+        print('Owner: {0[owner]}'.format(estate))
+        print()
+        if 'description' in estate:
+            for line in estate['description'].splitlines():
+                for wrapped_line in tw.wrap(line, initial_indent='    ', subsequent_indent='    ', replace_whitespace=False):
+                    print(wrapped_line)
+                print()
+    print()
+
+    # for estate, state in estate_states.items():
+    #     print('===== {0[full_name]} ====='.format(state))
+    #     print('Owned by: {0[owner]}'.format(state))
+    #     print()
+    #     for event in estate_events[estate]:
+    #         print('{0.timestamp:%a, %d %b %Y %H:%M:%S}  {0.summary}'.format(event))
+    #     print()
+    #     if 'description' in state:
+    #         for line in state['description'].splitlines():
+    #             for wrapped_line in tw.wrap(line, initial_indent='    ', subsequent_indent='    ', replace_whitespace=False):
+    #                 print(wrapped_line)
+    #             print()
+    #     print()
+
+
+if __name__ == '__main__':
+    main()
