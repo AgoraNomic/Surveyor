@@ -1,0 +1,300 @@
+Return-Path: <agora-official-bounces@agoranomic.org>
+X-Original-To: owen+agora@grimoire.ca
+Delivered-To: owen+agora@grimoire.ca
+Received: from localhost (localhost [127.0.0.1])
+	by grimoire.ca (Postfix) with ESMTP id 7E5AA40DEA
+	for <owen+agora@grimoire.ca>; Tue,  9 May 2017 01:01:32 +0000 (UTC)
+Authentication-Results: grimoire.ca (amavisd-new); dkim=fail (2048-bit key)
+	reason="fail (message has been altered)" header.d=gmail.com
+Received: from grimoire.ca ([127.0.0.1])
+	by localhost (grimoire.ca [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id E0LdMvVBNoDj for <owen+agora@grimoire.ca>;
+	Tue,  9 May 2017 01:01:31 +0000 (UTC)
+Received: from vps.qoid.us (vps.qoid.us [71.19.146.223])
+	by grimoire.ca (Postfix) with SMTP id 758653F100
+	for <owen+agora@grimoire.ca>; Tue,  9 May 2017 01:01:31 +0000 (UTC)
+Received: (qmail 29906 invoked from network); 9 May 2017 01:01:30 -0000
+Received: from localhost (HELO vps.qoid.us) (127.0.0.1)
+  by vps.qoid.us with SMTP; 9 May 2017 01:01:30 -0000
+Delivered-To: agn-agora-official@agoranomic.org
+Received: (qmail 29896 invoked from network); 9 May 2017 01:01:28 -0000
+Received: from mail-yw0-f176.google.com (209.85.161.176)
+ by vps.qoid.us with SMTP; 9 May 2017 01:01:28 -0000
+Received: by mail-yw0-f176.google.com with SMTP id b68so37775225ywe.3
+ for <agora-official@agoranomic.org>; Mon, 08 May 2017 18:01:28 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=from:subject:to:message-id:date:user-agent:mime-version;
+ bh=jZmNeeHTN6Y6TpvV1LGBS7XvRrGkqzJoar0vYCgMFII=;
+ b=dLRZX8sTx3JRXQwRRTC+B3GuksZSif5pY9uaIEBQ1Qnfw2+9vQa7n044xVkkPeq+QY
+ D905WuNTGGrfeg9/PMCSXzeA41X2cYXkJqedAdRyDFNqs9qHng+suYBCYEafDH+5LiwV
+ 4fGs3s/O2LRsDxZuTedNG2/Y2HGMR+q9kptQjgQvKbfhv1aWZFHyxAUrLm26vb+I2+KP
+ uEBheiC/5pV40l1dc44AIMKLhEzNbQcdQWnFOVrftOfXbrtMT0ZH4wFj+AdrfyUvlTUk
+ pmwZLyxUgmYQACDtRNfhhhukjGdTd6cPrZxj5vKqr04pINP9dgi7aXF5uHxmT+i3+jZd
+ JKTA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:subject:to:message-id:date:user-agent
+ :mime-version;
+ bh=jZmNeeHTN6Y6TpvV1LGBS7XvRrGkqzJoar0vYCgMFII=;
+ b=Cb/ZFjN4qX9B1QL8ul6ttAR20XwPN95nBYsjrKQPU93Nrp4wrGMKkuH53i5oSDnDvP
+ EJhStMSqUv8RINTsBG+3/VaLSqzfJzMeqZj3N1N1NUzg3IK6SDl8LO1DZNtoy7koI7qI
+ OKVUNcgoA1hVgxnkUqUgpcwyaKv1BnQAHx/q6KnwxnLJAxQREC5iNSY6gA1Mj1ZBngna
+ QRyRwcUIf9hVnVq1JgllYr8OdlFVUJYKcwGDHw09/JqeknJLAR1/+ousJyq6G6TeGGr9
+ 9HNjxAJHan11tLeQKFFKESNXXSmBdZjObRZqFPEsLB7gu6v4CPVLGs3eO62ekXYwHpL2
+ gWkg==
+X-Gm-Message-State: AN3rC/6FO6Co3FlBNaNYuWbQ93Hr1bR3WFvw72BhqfwvrJbEVnEZq4RI
+ 7tdUZEK8Wsp5HDxwYwo=
+X-Received: by 10.129.44.66 with SMTP id s63mr56724112yws.64.1494291686753;
+ Mon, 08 May 2017 18:01:26 -0700 (PDT)
+Received: from [192.168.1.6] (75-132-154-246.dhcp.stls.mo.charter.com.
+ [75.132.154.246])
+ by smtp.gmail.com with ESMTPSA id c128sm7074560ywh.2.2017.05.08.18.01.25
+ for <agora-official@agoranomic.org>
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+ Mon, 08 May 2017 18:01:25 -0700 (PDT)
+From: nichdel <nichdel@gmail.com>
+To: agora-official@agoranomic.org
+Message-ID: <af3d5e06-65b9-ccec-2fe1-051048fcca44@gmail.com>
+Date: Mon, 8 May 2017 20:02:55 -0500
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101
+ Thunderbird/52.1.0
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha256;
+ protocol="application/pgp-signature";
+ boundary="f0iXgPvbQpLNA14GjrGE988e1M4wDt16u"
+Subject: OFF: [Assessor] Resolution of Proposal(s) 7844-7847
+X-BeenThere: agora-official@agoranomic.org
+X-Mailman-Version: 2.1.22
+Precedence: list
+List-Id: "Agora Nomic reports, etc. \(PF\)" <agora-official.agoranomic.org>
+List-Unsubscribe: <http://www.agoranomic.org/cgi-bin/mailman/options/agora-official>, 
+ <mailto:agora-official-request@agoranomic.org?subject=unsubscribe>
+List-Archive: <http://www.agoranomic.org/cgi-bin/mailman/private/agora-official/>
+List-Post: <mailto:agora-official@agoranomic.org>
+List-Help: <mailto:agora-official-request@agoranomic.org?subject=help>
+List-Subscribe: <http://www.agoranomic.org/cgi-bin/mailman/listinfo/agora-official>, 
+ <mailto:agora-official-request@agoranomic.org?subject=subscribe>
+Reply-To: agora-discussion@agoranomic.org
+Errors-To: agora-official-bounces@agoranomic.org
+Sender: "agora-official" <agora-official-bounces@agoranomic.org>
+
+This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
+--f0iXgPvbQpLNA14GjrGE988e1M4wDt16u
+Content-Type: multipart/mixed; boundary="laidAgbSwsh4itfb34we9wdgUWuli0BA3";
+ protected-headers="v1"
+From: nichdel <nichdel@gmail.com>
+To: agora-official@agoranomic.org
+Message-ID: <af3d5e06-65b9-ccec-2fe1-051048fcca44@gmail.com>
+Subject: [Assessor] Resolution of Proposal(s) 7844-7847
+
+--laidAgbSwsh4itfb34we9wdgUWuli0BA3
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Content-Language: en-US
+
+NB: I still intend to start putting proposal records on the wiki, but
+wanted to get this one out instead of delaying it.
+
+I resolve the decision(s) to adopt proposal(s) 7844-7847as below.
+
+------------------------------------------------------------------------
+
+[This notice resolves the Agoran decisions of whether to adopt the
+ following proposals.  For each decision, the options available to
+ Agora are ADOPTED (*), REJECTED (x), and FAILED QUORUM (!). If a
+ decision's voting period is still ongoing, I end it immediately
+ before resolving it and after resolving the previous decision.]
+
+ID     Author(s)         AI   Title
+--------------------------------------------------------
+x7844  o                 2.0  Mint Chocolate nichdel 10
+*7845  Aris, ais523      1.0  Free Agency nichdel 9
+*7846  o, Aris           3.0  Real Estate o 4
+x7847  Aris, o, nichdel  3.0  Assets v3 Aris 4
+
+|         | 7844 | 7845 | 7846 | 7847 |
+|---------+------+------+------+------+
+|Aris     | F    | F    | F    | F    |
+|G.       | A    | P    | F    | A    |
+|Murphy   | P    | P    | F    | F    |
+|nichdel  | F    | P    | F    | P    |
+|o        | A    | P[1] | F    | F    |
+|P.S.S.[2]| F    | F    | F    | F    |
+|Quazie   | A[3] | P[3] | F[3] | A[3] |
+|=E5=A4=A9=E7=81=AB=E7=8B=90   | A    | A    | F    | A    |
+|---------+------+------+------+------+
+|F/A      | 3/4  | 2/1  | 8/0  | 4/3  |
+|AI       | 2.0  | 1.0  | 3.0  | 3.0  |
+|V        | 8    | 8    | 8    | 8    |
+|Q        | 2    | 5    | 5    | 5    |
+|P        | F    | T    | T    | F    |
+
+Final quorum: 5
+
+[1]ENDORSE ais523, if e votes; otherwise, PRESENT.
+
+[2] Publius Scribonius Scholasticus
+
+[3] {
+
+For the above 4 proposals I vote as follows:
+
+   While CFJ 3474 remains unjudged: AGAINST (This is just to be
+obnoxious, and cuz I wanna know if i'm a player already)
+   If CFJ 3474 becomes judged:
+     For each proposal Murphy votes on: I endorse G.
+     For each proposal Murphy does not vote on: I endorse ais523
+
+}
+
+The full text of the adopted proposal(s) is included below.
+
+//////////////////////////////////////////////////////////////////////
+ID: 7845
+Title: Free Agency
+Adoption index: 1.0
+Author: Aris
+Co-author(s): ais523
+
+
+Amend Rule 2467, "TLAs", by:
+ changing its name to "Agencies";
+ and by changing the paragraph beginning "The Powers of an Agency..." to =
+read:
+
+    The Powers of an Agency must be stated as actions, although they may
+    may be conditional on date, time, game state, or other preconditions.=
+
+    If condition(s) are specified as necessary for a power to be used, it=
+
+    is limited; otherwise, it is unlimited. If it attempts to specify a
+    power in a manner that is unclear, ambiguous, circular, inconsistent,=
+
+    paradoxical, or that depends on information that is impossible or
+    unreasonably difficult to determine, then the specification of that
+    power is invalid, and it CANNOT be used. [Some wording borrowed from
+    Rule 2460.]
+
+//////////////////////////////////////////////////////////////////////
+ID: 7846
+Title: Real Estate
+Adoption index: 3.0
+Author: o
+Co-author(s): Aris
+
+
+If Shinies are money - plentiful, liquid, easily acquired in small
+quanties but still valuable - then Estates are land: rare, illiquid,
+difficult to acquire in any quantity, intrinsically valuable.
+
+Enact a new rule, "The Surveyor", with power 1, with the text:
+
+    The Surveyor is an office. Eir weekly report includes the owner of
+    each Estate.
+
+Enact a new rule, "Estates", with power 2, with the text:
+
+    An Estate is a type of entity. The following changes are secured:
+    creating, modifying, or destroying an Estate; and causing an
+    entity to become an Estate or cease to be an Estate.
+
+    Owner is a switch belonging to each Estate, tracked by the
+    Surveyor, whose legal values are any player, any Organization, or
+    Agora. The default Owner of an Estate is Agora. Changes to Owner
+    switches are secured.
+
+    To transfer an Estate to a player or Organization is to set its
+    Owner switch to that player or that Organization. To transfer an
+    Estate to Agora is to set its Owner switch to Agora.
+
+    A player who owns an Estate can and may transfer it to any player,
+    to any Organization, or to Agora, by announcement.
+
+    A player may cause an Organization which owns an Estate to transfer
+    that Estate to any player, to any Organization, or to Agora, by
+    announcement, if it is Appropriate to do so under that
+    Organization's charter.
+
+Create the following Estates:
+
+    * The Estate of Antegria
+    * The Estate of Borduria
+    * The Estate of Cagliostro
+    * The Estate of Dawsbergen
+    * The Estate of Erehwon
+
+Enact a new rule, "Estate Ballots", with power 3, with the text:
+
+    During any Agoran Decision, a player who owns one or more Estates
+    can, by announcement, expend any number of their owned Estates on
+    the Agoran Decision by transferring that Estate to Agora. Eir
+    voting strength on that decision is increased by 1 for each Estate
+    expended on it.
+
+Enact a new rule, "Estate Auctions", with power 2, with the text:
+
+    At the start of each month, if Agora owns at least one Estate, the
+    Surveyor shall put one Estate which is owned by Agora up for
+    auction, by announcement. Each auction ends seven days after it
+    begins.
+
+    During an auction, any player may bid any number of Shinies by
+    announcement. Any player may cause any Organization to bid any
+    number of Shinies, by announcement, if it is Appropriate under that
+    Organization's charter to place the bid.
+
+    At the end of an auction, if there is a single highest bid, the
+    player or Organization that placed the highest bid can cause Agora
+    to transfer the auctioned Estate to emself by paying Agora the
+    number of Shinies stated in their most recent bid. If the highest
+    bidder does not do so in a timely fashion, the Surveyor shall issue
+    the player who submitted the bid a Yellow Card.
+
+Amend rule 2485 ("You Can't Take It With You") and replace its text with:=
+
+
+     "Heir" is a person switch, tracked by the Registrar, whose value
+     is either empty or the name of a player or Organization. Each
+     person's Heir is empty by default. A player may flip eir Heir by
+     announcement.
+
+     When a player is deregistered, if eir Heir switch is not empty, e
+     automatically pays all of eir Balance to the named player or
+     Organization, and transfers all of eir Estates to the named player
+     or Organization. Otherwise, if eir Heir switch is empty, e may
+     specify another player, an Organization, or Agora, and pay all of
+     eir Balance and transfer all of eir Estates to the specified
+     player or Organization. If the player does not do so within 1 day
+     of deregistration, the Registrar CAN and SHALL cause that player
+     to pay eir Balance to Agora and to transfer all of eir Estates to
+     Agora, by announcement.
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+--laidAgbSwsh4itfb34we9wdgUWuli0BA3--
+
+--f0iXgPvbQpLNA14GjrGE988e1M4wDt16u
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: OpenPGP digital signature
+Content-Disposition: attachment; filename="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEEv8WBrk6CTvdb5r972HholOH9/uEFAlkRFUAACgkQ2HholOH9
+/uES6xAAhd4Qh3uWdQXTpfI3edHd8T9ntsLB9DaObOn5I4R0TH35HQodALnab2XU
+jFWfNxS2DZfZ5A8d+wSmPTmniMYWXJ7p7hjHELAH18G4Xt6K4K5tPnYkLD7Zps47
+RuuSViVSTbypSYQdqd83NK+h6ml0XXYTId+Ais9oUkmFLo8Z34ymSgjG3g/cDTJo
+Z01sW3/WTsbF0aaMr6hGqkYvHT/Ra1s6LKl9mZr//PXznIXSpjqGgtBsaa8bT21e
++G2eHWakc/q82/JqGm/AGY89Gl8izGk/lny64rTeOP0+HhKBMNmFpToUDCH+vE9j
+rgidcfcN5ugq5JXZpJfYtuaoi8kM6ZSg1fg/Ea1SQJ+Od/i/iWsecIZtmtD95laC
+jtJdX2eFP2klEBILlk5bLlnYeIksZlZzfCEDpF9pffY8ecu0htRfPkzqdCMtLhoP
++IfSsstSBGFL1eThE1UL4+DS5CxgP5WjQ/wO6yGQs6o30DE3yntJYQiMO9ij+VsD
+f88Ydi+vcFVyQyIqcAi1SfhTW/nnvvdkH8dE5tyj/hIVenBEyFIjoOc49DnqFp9R
+U+kzFqkxr+pRhoWwjCsr+Gxu5/+cT2Pi8G3AdhUMPhyRYK/rEZVTBMUfJeFosPFi
+vAiwBGx6m15zECv+g/25h6crvboZzisYrekWn/BglY8TjBsKn/E=
+=Tqbm
+-----END PGP SIGNATURE-----
+
+--f0iXgPvbQpLNA14GjrGE988e1M4wDt16u--
